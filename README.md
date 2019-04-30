@@ -4,6 +4,10 @@
 
 ### Install video streaming on the pi:
 
+sudo mkdir -p /usr/local/www
+
+cp index.html /usr/local/www
+
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 
 git clone https://github.com/jacksonliam/mjpg-streamer.git
@@ -18,9 +22,13 @@ sudo make install
 
 (sleep 60 ; sudo -u pi mjpg_streamer -o "output_http.so -w /usr/local/www" -i input_raspicam.so) &
 
-### view from a phone; open:
+### to view from a phone, open in the browser:
 
 http://raspberrypi.local:8080/?action=stream
+
+### to view from a phone in a VR headset (google cardboard), open in the browser:
+
+http://raspberrypi.local:8080/
 
 ## Microbit needs to function as the remote and the drive
 

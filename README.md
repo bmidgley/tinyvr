@@ -26,8 +26,8 @@ http://raspberrypi.local:8080/?action=stream
 
 ### Install microbit in ring:bit car (for another car, P1 & P2 may need to be changed to P0 & P1)
 
-load rc-car.js into makecode.microbit.org and load it onto the board
+load rc-car.js into makecode.microbit.org and upload it onto the board
 
 ### Use another microbit as the controller
 
-load rc-remote.js into makecode.microbit.org and load it onto the board
+load rc-remote.js into makecode.microbit.org and upload it onto the board

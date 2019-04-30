@@ -11,10 +11,3 @@ radio.onReceivedValue(function (name, value) {
     pins.servoWritePin(AnalogPin.P2, 90 - (pitch - roll))
 })
 radio.setGroup(55)
-pitch = 0
-roll = 0
-basic.forever(function () {
-    basic.pause(100)
-    radio.sendValue("roll", input.acceleration(Dimension.X))
-    radio.sendValue("pitch", input.acceleration(Dimension.Y))
-})

@@ -6,7 +6,7 @@
 
 sudo mkdir -p /usr/local/www
 
-cp index.html /usr/local/www
+cp index.html position.cgi /usr/local/www
 
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 

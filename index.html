@@ -1,2 +1,15 @@
-<img width=49% src="/?action=stream">
-<img width=49% src="/?action=stream">
+<html>
+  <head>
+    <script>
+      var alpha, beta, gamma;
+      if(window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', function(event) { alpha = event.alpha; beta = event.beta; gamma = event.gamma });
+        setInterval(function(){ fetch("/position?a="+alpha+"&b="+beta+"&g="+gamma); }, 500);
+      }
+    </script>
+  </head>
+  <body>
+    <img width=49% src="/?action=stream">
+    <img width=49% src="/?action=stream">
+  </body>
+</html>

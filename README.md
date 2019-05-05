@@ -6,7 +6,9 @@
 
 sudo mkdir -p /usr/local/www
 
-cp index.html position.cgi /usr/local/www
+cp index.html position.cgi servo.py /usr/local/www
+
+pip3 install pigpiod
 
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 

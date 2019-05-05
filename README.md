@@ -4,6 +4,8 @@
 
 ### Install video streaming on the pi:
 
+make
+
 sudo mkdir -p /usr/local/www
 
 cp index.html position.cgi servo.py /usr/local/www
@@ -22,7 +24,7 @@ sudo make install
 
 ### add to the end of /etc/rc.local:
 
-(sleep 60 ; sudo -u pi mjpg_streamer -o "output_http.so -w /usr/local/www" -i input_raspicam.so) &
+(sleep 60 ; sudo -u pi mjpg_streamer -o "output_http.so -w /usr/local/www" -i input_raspicam.so 2>&1 | /home/pi/tinyvr/driver.py) &
 
 ### to view from a phone, open in the browser:
 

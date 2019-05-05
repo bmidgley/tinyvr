@@ -16,9 +16,9 @@ def drive(pitch, roll):
     right.setSpeed(pitch - roll)
     left.setSpeed(pitch + roll)
 
-a = arguments["a"].value
-b = arguments["b"].value
-g = arguments["g"].value
+a = int(arguments["a"].value)
+b = int(arguments["b"].value)
+g = int(arguments["g"].value)
 
 #drive(0.5, 0.5)
 

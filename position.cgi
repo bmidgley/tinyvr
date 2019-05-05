@@ -20,6 +20,9 @@ a = int(arguments["a"].value)
 b = int(arguments["b"].value)
 g = int(arguments["g"].value)
 
-#drive(0.5, 0.5)
+pitch = ((90 + g) if (g < 0) else (90-g)) / 90
+roll = b / 90
+
+drive(pitch, roll)
 
 

@@ -1,8 +1,8 @@
 # tinyvr
 
-## Pi needs to stream video
+## Pi needs to stream video and steer motors
 
-### Install video streaming on the pi:
+### Install video streaming and controller on the pi:
 
 make
 

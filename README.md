@@ -10,7 +10,7 @@ sudo mkdir -p /usr/local/www
 
 cp index.html position.cgi /usr/local/www
 
-pip3 install pigpiod
+pip3 install pigpio
 
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 

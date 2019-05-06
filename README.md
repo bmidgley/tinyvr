@@ -26,11 +26,11 @@ sudo make install
 
 (sleep 60 ; sudo -u pi mjpg_streamer -o "output_http.so -w /usr/local/www" -i input_raspicam.so 2>&1 | /home/pi/tinyvr/driver.py) &
 
-### to view from a phone, open in the browser:
-
-http://raspberrypi.local:8080/?action=stream
-
-### to view from a phone in a VR headset (google cardboard), open in the browser:
+### to view from a phone in a VR headset (google cardboard) and drive the robot, open in the browser:
 
 http://raspberrypi.local:8080/
+
+### to view only from a browser, open in the browser:
+
+http://raspberrypi.local:8080/?action=stream
 

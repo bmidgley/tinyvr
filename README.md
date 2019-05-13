@@ -4,11 +4,15 @@
 
 ### Install video streaming and controller on the pi:
 
+cd tinyvr
+
 make
 
 sudo mkdir -p /usr/local/www
 
-cp index.html position.cgi /usr/local/www
+sudo cp index.html position.cgi /usr/local/www
+
+cd
 
 pip3 install pigpio
 

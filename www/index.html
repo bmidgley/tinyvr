@@ -7,7 +7,7 @@
       gamma = 0;
       if(window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(event) { alpha = Math.round(event.alpha); beta = Math.round(event.beta); gamma = Math.round(event.gamma); });
-        setInterval(function(){ fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma); }, 400);
+        setInterval(function(){ fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma); }, 250);
       }
     </script>
   </head>

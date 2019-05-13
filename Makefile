@@ -1,6 +1,6 @@
 
-position.cgi: position.c
-	cc -o position.cgi position.c
+www/position.cgi: position.c
+	cc -o www/position.cgi position.c
 
 clean:
 	rm -f position.cgi

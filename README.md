@@ -23,6 +23,7 @@ sudo make install
 ### add to the end of /etc/rc.local:
 
 pigpiod &
+
 (sleep 60 ; sudo -u pi mjpg_streamer -o "output_http.so -w /home/pi/tinyvr/www" -i "input_raspicam.so -fps 20" 2>&1 | /home/pi/tinyvr/driver.py) &
 
 ### to view from a phone in a VR headset (google cardboard) and drive the robot, open in the browser:

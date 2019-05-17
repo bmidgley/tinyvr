@@ -10,6 +10,8 @@ make
 
 cd
 
+sudo apt update
+
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 
 git clone https://github.com/bmidgley/mjpg-streamer.git

@@ -6,8 +6,19 @@
       beta = 0;
       gamma = 0;
       if(window.DeviceOrientationEvent) {
-        window.addEventListener('deviceorientation', function(event) { alpha = Math.round(event.alpha); beta = Math.round(event.beta); gamma = Math.round(event.gamma); });
-        setInterval(function(){ fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma); }, 250);
+        window.addEventListener('deviceorientation', function(event) {
+          alpha = Math.round(event.alpha);
+          beta = Math.round(event.beta);
+          gamma = Math.round(event.gamma);
+        }, true);
+        setInterval(
+          function() {
+            fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma);
+          }, 250
+        );
+      } else {
+        console.log("no orientation data");
+        alert("nop");
       }
     </script>
   </head>

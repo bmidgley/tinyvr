@@ -1,5 +1,26 @@
 <html>
   <head>
+  <style type=text/css>
+#arrow1 {
+  left: 70%;
+}
+
+#arrow2 {
+   left: 20%;
+}
+
+.arrows {
+    top: 10%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 200px solid red;
+    position: absolute;
+    opacity: 0.2;
+    transform: rotate(10deg);
+}
+  </style>
     <script>
       var alpha, beta, gamma;
       alpha = 0;
@@ -13,7 +34,7 @@
         }, true);
         setInterval(
           function() {
-            fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma);
+            document.querySelectorAll('.arrows').forEach(e=>{ e.style.transform = "rotate(" + beta + "deg)" });
           }, 250
         );
       } else {
@@ -22,6 +43,8 @@
     </script>
   </head>
   <body>
+    <div id="arrow1" class="arrows"></div>
+    <div id="arrow2" class="arrows"></div>
     <img width=49% src="/?action=stream">
     <img width=49% src="/?action=stream">
   </body>

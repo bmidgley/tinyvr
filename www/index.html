@@ -1,6 +1,6 @@
 <html>
   <head>
-  <style type=text/css>
+    <style type=text/css>
 #arrow1 {
   left: 68%;
 }
@@ -20,7 +20,7 @@
     opacity: 0.2;
     transform: rotate(10deg);
 }
-  </style>
+    </style>
     <script>
       var alpha, beta, gamma;
       alpha = 0;
@@ -40,6 +40,14 @@
       } else {
         alert("This device can only view but not drive the robot -- chrome recently disabled using orientation over http");
       }
+      window.onclick = function() {
+        fetch("/position.cgi?a="+alpha+"&b="+beta+"&g="+gamma);
+      };
+     window.oncontextmenu = function(event) {
+       event.preventDefault();
+       event.stopPropagation();
+       return false;
+     };
     </script>
   </head>
   <body>

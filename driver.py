@@ -13,9 +13,10 @@ right = servo.Servo(left_pin, invert=True)
 left = servo.Servo(right_pin)
 
 def drive(a, direction, g):
-    rs = math.cos(direction+45)
-    ls = math.cos(direction-45)
-    print('rs %d ls %d' % (rs, ls))
+    d = math.radians(direction)
+    rs = math.cos(d+math.pi/4)
+    ls = math.cos(d-math.pi/4)
+    print('f(%d) = (%f,%f)' % (direction, ls, rs))
     right.setSpeed(rs)
     left.setSpeed(ls)
     time.sleep(0.15)

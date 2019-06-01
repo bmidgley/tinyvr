@@ -9,8 +9,8 @@ import time
 left_pin = 23
 right_pin = 24
 
-right = servo.Servo(left_pin, invert=True)
-left = servo.Servo(right_pin)
+left = servo.Servo(left_pin)
+right = servo.Servo(right_pin, invert=True)
 
 def drive(a, direction, g):
     d = math.radians(direction)

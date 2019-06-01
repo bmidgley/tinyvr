@@ -11,7 +11,7 @@ class Servo:
         self.positionRange = positionRange
         self.positionCenter = positionCenter
         self.speed = 0
-        self.position = 1500
+        self.position = positionCenter
         self.inv = -1 if invert else 1
         # Set frequency and pulse width
         Servo.gpio.set_PWM_frequency(port, 100)
@@ -33,7 +33,7 @@ class Servo:
             # Set servo pulse width to adjust position of fixed rotation servo
             self.position = position
             # 1500 center point (max range 500-2500, safe range 1000-2000)
-            Servo.gpio.set_servo_pulsewidth(self.port, 1500 + position*self.positionRange)
+            Servo.gpio.set_servo_pulsewidth(self.port, self.positionCenter + position*self.positionRange)
 
     # Add to current position between -1.0 and 1.0 (used for fixed 180 degree rotation servos)
     def alterPosition(self, positionIncrement):
@@ -45,7 +45,7 @@ class Servo:
             # Set servo pulse width to adjust position of fixed rotation servo
             self.position = newPos
             # 1500 center point (max range 500-2500, safe range 1000-2000)
-            Servo.gpio.set_servo_pulsewidth(self.port, 1500 + newPos * self.positionRange)
+            Servo.gpio.set_servo_pulsewidth(self.port, self.positionCenter + newPos * self.positionRange)
 
     def stop(self):
         Servo.gpio.set_servo_pulsewidth(self.port, 0)

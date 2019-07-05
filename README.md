@@ -14,7 +14,7 @@ sudo apt update
 
 sudo apt install -y libjpeg8-dev imagemagick libv4l-dev cmake
 
-git clone https://github.com/bmidgley/mjpg-streamer.git
+git clone https://github.com/jacksonliam/mjpg-streamer.git
 
 cd mjpg-streamer/mjpg-streamer-experimental
 
